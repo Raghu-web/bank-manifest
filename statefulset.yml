@@ -26,19 +26,20 @@ spec:
             name: bloodbank-secret
         resources:
           requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "200m"
+            cpu: "250m"
             memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
         volumeMounts:
         - name: mysql-persistent-storage
-          mountPath: /var/lib/mysql
+          mountPath: /usr/share/nginx/html
   volumeClaimTemplates:
   - metadata:
       name: mysql-persistent-storage
     spec:
-      accessModes: ["ReadWriteOnce"]
+      accessModes: 
+      - ReadWriteOnce
       resources:
         requests:
           storage: 1Gi
