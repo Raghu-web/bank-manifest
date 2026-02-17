@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: bloodbank-statefulset
 spec:
-  serviceName: bloodbank-service
+  serviceName: mysqldb
   replicas: 1
   selector:
     matchLabels:
