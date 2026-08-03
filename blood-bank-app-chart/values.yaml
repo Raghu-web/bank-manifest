@@ -9,13 +9,13 @@ namespace: default
 app:
   image:
     repository: raghuram0024/blooddonationapp
-    tag: "appimage-15"
+    tag: "appimage-16"
     pullPolicy: IfNotPresent
 
 db:
   image:
     repository: raghuram0024/blooddonationapp
-    tag: "dbimage-15"
+    tag: "dbimage-16"
     pullPolicy: IfNotPresent
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
