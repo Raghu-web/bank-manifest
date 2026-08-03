@@ -4,6 +4,7 @@ kind: ResourceQuota
 metadata:
   name: compute-resources
   namespace: default
+  namespace: {{ .Release.Namespace }}
 spec:
   hard:
     pods: "8"
