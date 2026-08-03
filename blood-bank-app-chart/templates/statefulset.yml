@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mysqldb
-          image: shaikmustafa/mybloodbank:db
+          image: "{{ .Values.db.image.repository }}:{{ .Values.db.image.tag }}"
           ports:
             - containerPort: 3306
           envFrom:
