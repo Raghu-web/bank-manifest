@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bloodbank-container
-        image: shaikmustafa/mybloodbank:app
+        image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}"
         ports:
         - containerPort: 80
         envFrom:
